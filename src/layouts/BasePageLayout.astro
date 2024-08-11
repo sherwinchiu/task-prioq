@@ -1,0 +1,21 @@
+---
+import QueueContentLayout from "./QueueContentLayout.astro"
+import InputFormLayout from "./InputFormLayout.astro"
+---
+
+
+<html data-theme="dark" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+        <title>task-prioq</title>
+	</head>
+	<body>
+		<div class="flex w-full h-full">
+			<QueueContentLayout class="" title="main-queue"></QueueContentLayout>
+			<div class="divider divider-horizontal divider-neutral"></div>
+			<InputFormLayout title="main-input"></InputFormLayout>
+		</div>
+	</body>
+</html>
