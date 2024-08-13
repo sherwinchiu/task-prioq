@@ -1,4 +1,9 @@
-
-
-
-<button class="btn btn-neutral btn-square no-animation mx-0.5 my-1 px-24 py-24 float-right"></button>
+---
+const { cardTitle, description } = Astro.props;
+---
+<div class="card bg-neutral mx-0.5 my-1 w-48 h-48 shadow-xl float-right">
+    <div class="card-body">
+        <h2 class="card-title"> {cardTitle} </h2>
+        <p> {description} </p>
+    </div>
+</div>

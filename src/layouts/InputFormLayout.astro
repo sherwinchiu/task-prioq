@@ -1,7 +1,22 @@
 ---
+import QueueElement from "../components/QueueElement.astro"
 ---
+
 <div class="w/1/5">
-    <input type="text" placeholder="Task Title" class="w-2/3 input input-bordered w-full max-w-xs" />
-    <button class="btn btn-neutral w-1/4">add</button>
-    <textarea class="resize-none text-lg textarea textarea-bordered block p-2.5 w-full text-sm rounded-lg h-96 mt-2" placeholder="Task Description"></textarea>
+    <input id="title-text" type="text" placeholder="Task Title" class="w-3/5 input input-bordered w-full max-w-xs" />
+    <button id="button-add" class="btn btn-neutral w-1/6">add</button>
+    <button id="button-remove" class="btn btn-neutral w-1/6">x</button>
+    <textarea id = "description-text" class="resize-none text-lg textarea textarea-bordered block p-2.5 w-full text-sm rounded-lg h-96 mt-2" placeholder="Task Description"></textarea>
 </div>
+<script>
+    import { addCard, removeCard } from '../../scripts/card.js';
+    
+    const addButton = document.getElementById('button-add');
+    addButton?.addEventListener('click', () => {
+        const tuple = addCard();
+    });
+    const removeButton = document.getElementById('button-remove');
+    removeButton?.addEventListener('click', () => {
+        removeCard();
+    });
+</script>
